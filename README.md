@@ -1,8 +1,8 @@
 # Rodar localmente
 terminal:
-'''bash
+```bash
 npm run dev 
-'''
+```
 
 
 # React + Vite
