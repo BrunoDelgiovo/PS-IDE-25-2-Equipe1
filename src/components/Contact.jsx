@@ -22,13 +22,26 @@ const Contact = () => {
     }).then((res) => res.json());
 
     if (res.success) {
-      Swal.fire({
-    title: "Perfeito",
-    text: "Sua mensagem foi enviada com sucesso!",
-    icon: "success"
-                });
-    
-      event.target.reset();    }
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Mensagem enviada com sucesso!",
+        color: "#2c003e",
+        background: "#f5e1f4",
+      });
+
+      event.target.reset();
+    }
   };
   return (
     <>
