@@ -1,0 +1,113 @@
+.carousel-container {
+    /* max-width: 800px; */
+    margin: 0 auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.carousel-content {
+    position: relative;
+    min-height: 200px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.carousel-image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35%;
+    max-width: 200px;
+    padding: 5px;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.carousel-text {
+    width: 100%;
+    padding-right: calc(35% + 15px);
+}
+
+/* When there's no image */
+.carousel-content:not(:has(.carousel-image-container)) .carousel-text {
+    padding-right: 0;
+}
+
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.carousel-arrow {
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    transition: background-color 0.2s;
+}
+
+.carousel-arrow:hover {
+    background-color: #e0e0e0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin: 0 20px;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.carousel-dot.active {
+    background-color: #555;
+    transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .carousel-image-container {
+        position: relative;
+        width: 100%;
+        max-width: none;
+        margin-bottom: 15px;
+    }
+    
+    .carousel-text {
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,79 @@
+import React, { useState } from "react";
+import "./Carousel.css";
+
+function Carousel() {
+  const pages = [
+    {
+      title: "Portas Abertas 2025",
+      content:
+        'Uma oficina de programação em Portugol para o evento "Portas Abertas".\n\nO grupo preparou uma apresentação sobre sua história e conduziu sessões de 30 minutos com os participantes,que tiveram uma boa adesão.',
+      image: "src/images/PortasAbertas.png",
+    },
+    {
+      title: "Torneio Feminino de Programação:",
+      content:
+        "Uma colaboração com o Laboratório de Programação Competitiva (LPC).",
+    },
+  ];
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const goToPrevious = () => {
+    setCurrentPage((prev) => (prev === 0 ? pages.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentPage((prev) => (prev === pages.length - 1 ? 0 : prev + 1));
+  };
+  return (
+    <div className="carousel-container">
+      <div className="carousel-content">
+        {pages[currentPage].image && (
+          <div className="carousel-image-container">
+            <img
+              src={pages[currentPage].image}
+              alt={`Image for ${pages[currentPage].title.substring(0, 20)}`}
+              className="carousel-image"
+            />
+          </div>
+        )}
+        <h3 className="carousel-text">{pages[currentPage].title} </h3>
+        <p className="carousel-text" style={{ whiteSpace: "pre-line" }}>
+          {pages[currentPage].content}
+        </p>
+      </div>
+
+      <div className="carousel-controls">
+        <button
+          className="carousel-arrow carousel-prev"
+          onClick={goToPrevious}
+          aria-label="Previous page"
+        >
+          &larr;
+        </button>
+
+        <div className="carousel-track">
+          {pages.map((_, index) => (
+            <button
+              key={index}
+              className={`carousel-dot ${
+                currentPage === index ? "active" : ""
+              }`}
+              onClick={() => setCurrentPage(index)}
+              aria-label={`Go to page ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        <button
+          className="carousel-arrow carousel-next"
+          onClick={goToNext}
+          aria-label="Next page"
+        >
+          &rarr;
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default Carousel;
