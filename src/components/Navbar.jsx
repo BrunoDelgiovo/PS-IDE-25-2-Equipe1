@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Scrollspy from 'react-scrollspy';
 
 const navLinks = [
     { href: '#QuemSomos', text: 'Quem somos nós?' },
@@ -20,17 +21,24 @@ export default function Navbar() {
         setMobileMenuOpen(false);
     };
 
+    const navLinkIds = navLinks.map(link => link.href.substring(1));
+
     return (
         <nav className="main-nav">
             <div className="nav-container">
                 <div className="nav-content">
-                    <div className="desktop-menu">
+                    <Scrollspy
+                        items={navLinkIds}
+                        currentClassName="is-current"
+                        className="desktop-menu"
+                        offset={-100}
+                    >
                         {navLinks.map((link) => (
                             <a key={link.href} href={link.href} className="nav-link">
                                 {link.text}
                             </a>
                         ))}
-                    </div>
+                    </Scrollspy>
 
                     <div className="mobile-menu-button-container">
                         <button id="mobile-menu-button" className="mobile-menu-button" onClick={toggleMobileMenu}>
