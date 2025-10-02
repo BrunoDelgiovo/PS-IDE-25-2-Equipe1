@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Section from './components/Section';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 import './App.css';
 
@@ -45,9 +46,7 @@ function App() {
             <p>Grid para integrantes</p>
         </Section>
 
-        <Section id="ContateNos" title="Contate-nos">
-            <p>Formulário de contato</p>
-        </Section>
+        <Contact />
       </main>
 
       <Footer />
