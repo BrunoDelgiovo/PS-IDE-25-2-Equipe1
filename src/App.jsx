@@ -121,7 +121,9 @@ function App() {
           </p>
         </Section>
 
-        <GridParticipantes />
+        <div id="Integrantes">
+          <GridParticipantes />
+        </div>
 
         <Section id="ContateNos" title="">
           <Contact />
