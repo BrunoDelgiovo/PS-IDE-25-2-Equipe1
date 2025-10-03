@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Section from './components/Section';
 import Footer from './components/Footer';
+import GridParticipantes from './components/GridParticipantes';
 
 import './App.css';
 
@@ -10,7 +11,6 @@ import logoImage from './images/Program_Ada.png';
 function App() {
   return (
     <>
-      <Navbar />
       <section id="Logo" className="logo-section">
             <img src={logoImage} alt="Logo do Program.Ada" className="logo-image" />
         </section>
@@ -41,9 +41,7 @@ function App() {
              <p>O Meninas Digitais nasceu a partir de discussões realizadas no Women in Information Technology (WIT), evento que compõe o Congresso da SBC desde 2007, e se tornou o primeiro projeto sobre questões de gênero na TI no Brasil. Posteriormente, a iniciativa criou políticas de incentivo e normativas de engajamento para atrair mais meninas/mulheres para as carreiras ligadas à computação e à tecnologia.</p>
         </Section>
         
-        <Section id="Integrantes" title="Integrantes">
-            <p>Grid para integrantes</p>
-        </Section>
+              <GridParticipantes />
 
         <Section id="ContateNos" title="Contate-nos">
             <p>Formulário de contato</p>
