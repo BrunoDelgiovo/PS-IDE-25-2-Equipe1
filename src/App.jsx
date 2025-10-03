@@ -77,9 +77,12 @@ function App() {
           </ul>
         </Section>
 
-        <Section id="Projetos" title="Projetos 2024/2025">
+        <div id="Projetos" className="window-container">
+          <div className="window-header">
+            <h2 className="window-header__title">PROJETOS 2024/25</h2>
+          </div>
           <Carousel />
-        </Section>
+        </div>
 
         <Section id="MeninasDigitais" title="Meninas Digitais">
           <p>
@@ -121,13 +124,19 @@ function App() {
           </p>
         </Section>
 
-        <div id="Integrantes">
-          <GridParticipantes />
+        <div id="Integrantes" className="window-container">
+            <div className="window-header">
+                <h2 className="window-header__title">INTEGRANTES</h2>
+            </div>
+            <GridParticipantes />
         </div>
-
-        <Section id="ContateNos" title="">
+        
+        <div id="ContateNos" className="window-container">
+          <div className="window-header">
+            <h2 className="window-header__title">CONTATE-NOS</h2>
+          </div>
           <Contact />
-        </Section>
+        </div>
       </main>
 
       <Footer />

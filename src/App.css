@@ -79,8 +79,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span {
 
 .nav-container {
     max-width: 1280px; 
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 1.6rem;
     padding-right: 1.6rem;
 }
@@ -217,6 +217,26 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span {
     -webkit-backdrop-filter: blur(4px);
     border-radius: 0.8rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: none;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #8a2be2 0%, #e84393 100%) border-box;
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    pointer-events: none;
 }
 
 .card:hover {
@@ -240,10 +260,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span {
 }
 
 .card .list {
-    list-style-type: disc;
-    list-style-position: inside;
     color: #2c003e;
-    font-size: 9px;
+    font-size: 12px;
 }
 
 .card .list li {
@@ -253,7 +271,28 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span {
     margin-bottom: 0;
 }
 
+.card ul {
+    list-style: none;
+    padding-left: 0;
+}
 
+.card ul li {
+    position: relative;
+    padding-left: 2em;
+    margin-bottom: 1em;
+}
+
+.card ul li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    top: -0.1em;
+    background: linear-gradient(135deg, #8a2be2 0%, #e84393 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.4rem; 
+}
 
 .main-footer {
     display: flex;
@@ -293,65 +332,35 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span {
 }
 
 /* Formulario de contato */
-#ContateNos .contact {
+#ContateNos.window-container {
+    margin-top: 8rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 6.4rem 1.6rem;
-    padding: 0;
-}
-
-#ContateNos .card {
-  padding: 0;
-  overflow: hidden;
-}
-
-#ContateNos .card:hover {
-  transform: none;
-}
-
-
-#ContateNos .section-title {
-  display: none;
-}
-
-#ContateNos .title-text {
-    font-size: 14px;
-    color: #fff;
-    background: linear-gradient(135deg, #8d62b4bd 0%, #f160cd 100%);
-    padding: 8px 12px;
-    letter-spacing: 1px;
-    white-space: nowrap; 
-    letter-spacing: 1px;
-    z-index: 1;
-    border: 2px solid #000;
-    border-bottom: none;
-    align-items: center;
-    min-width: 200px;
-    margin: 0;
-    padding: 8px 16px;
-    display: flex;
-    position: relative;
-    text-shadow: 1px 1px 0px #611c59;
-}
-
-#ContateNos .title-bar {
-  border-bottom: 1px solid #000;
-  background-color: #c0c0c0;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 4rem;
 }
 
 #ContateNos form {
-    max-width: 1024px;
-    border-radius: 0;
-    color: #2c003e;
-    background-color: transparent;
-    border: none;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px 28px;
 }
 
 #ContateNos .form-body {
-    padding: 30px;
-    border-top: 1px solid #000;
+    flex-grow: 1;
+}   
+
+#ContateNos .window-container {
+    background: #f0f0f0;
+    border: 3px solid #000;
+    flex-direction: column;
+    width: 100%;
+    margin: 6.4rem auto; /* Substitui o padding da .content-section */
+    font-family: "Press Start 2P", monospace;
+    max-width: 896px; /* Mesma largura dos .card */
+    position: relative;
+    box-shadow: inset 2px 2px #fff, inset -2px -2px gray, 4px 4px 8px rgba(0, 0, 0, .3);
 }
 
 #ContateNos form .inputbox {
@@ -398,6 +407,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span {
     padding: 10px 20px;
     cursor: pointer;
     outline: none;
+    align-self: flex-start;
 }
 
 #ContateNos .btn:active {
@@ -489,4 +499,54 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span {
         padding-left: 3.2rem;
         padding-right: 3.2rem;
     }
+}
+
+.window-container {
+    background: #f0f0f0;
+    border: 3px solid #000;
+    flex-direction: column;
+    width: 100%;
+    margin: 6.4rem auto; /* Substitui o padding da .content-section */
+    font-family: "Press Start 2P", monospace;
+    max-width: 896px; /* Mesma largura dos .card */
+    position: relative;
+    box-shadow: inset 2px 2px #fff, inset -2px -2px gray, 4px 4px 8px rgba(0, 0, 0, .3);
+}
+
+.window-header {
+    background: linear-gradient(silver 0%, gray 100%);
+    border-bottom: 2px solid #000;
+    align-items: stretch;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    position: relative;
+}
+
+.window-header__title {
+   background: linear-gradient(135deg, #8a2be2 0%, #e84393 100%);
+    color: #fff;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    min-width: 170px;
+    margin: 0;
+    padding: 8px 16px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.content-section{
+  scroll-margin-top: 60px;
+}
+
+.window-container {
+    scroll-margin-top: 90px;
+}
+
+.scrollbar {
+    scrollbar-color: #9d7cbf #f0f0f0;
 }

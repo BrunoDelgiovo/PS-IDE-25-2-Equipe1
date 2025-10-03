@@ -69,10 +69,6 @@ const GridParticipantes = () => {
     const startIndex = currentPage * participantesPerPage;
     const currentParticipants = participantes.slice(startIndex, startIndex + participantesPerPage);
     return (
-        <div className='window-container'>
-            <div className='window-header'>
-                <h2 class='window-header__title'>INTEGRANTES</h2>
-            </div>
             <div className='participantes-container'>
                 <div className='participantes-grid'>
                     {currentParticipants.map((participant) => (
@@ -128,7 +124,6 @@ const GridParticipantes = () => {
                     </button>
                 </div>
             </div>
-        </div>
     )
 }
 export default GridParticipantes;

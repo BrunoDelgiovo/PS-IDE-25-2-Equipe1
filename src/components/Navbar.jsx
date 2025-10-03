@@ -31,7 +31,7 @@ export default function Navbar() {
                         items={navLinkIds}
                         currentClassName="is-current"
                         className="desktop-menu"
-                        offset={-100}
+                        offset={-200}
                     >
                         {navLinks.map((link) => (
                             <a key={link.href} href={link.href} className="nav-link">
