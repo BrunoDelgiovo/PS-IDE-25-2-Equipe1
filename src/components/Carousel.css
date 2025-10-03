@@ -46,6 +46,21 @@
   object-fit: cover;
 }
 
+@keyframes fadeInCarousel {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.fade-in {
+  animation: fadeInCarousel 0.45s ease;
+}
+
 .carousel-text {
   width: 100%;
 }

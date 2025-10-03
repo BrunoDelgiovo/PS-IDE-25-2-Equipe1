@@ -44,7 +44,7 @@ function Carousel() {
   };
   return (
     <div className="carousel-container">
-      <div className="carousel-content">
+      <div key={currentPage} className="carousel-content fade-in">
         {pages[currentPage].image && (
           <div className="carousel-image-container">
             <img
