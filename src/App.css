@@ -234,6 +234,9 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span {
     -webkit-mask: 
         linear-gradient(#fff 0 0) padding-box, 
         linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
     pointer-events: none;
