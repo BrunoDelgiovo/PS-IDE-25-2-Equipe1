@@ -2,6 +2,8 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Section from './components/Section';
 import Footer from './components/Footer';
+import BackToTopButton from './components/BackToTopButton';
+import Contact from './components/Contact';
 
 import './App.css';
 
@@ -10,6 +12,12 @@ import logoImage from './images/Program_Ada.png';
 function App() {
   return (
     <>
+      <div className="background-wrap">
+        <div className="bubble bubble-1"></div>
+        <div className="bubble bubble-2"></div>
+        <div className="bubble bubble-3"></div>
+      </div>
+      
       <Navbar />
       <section id="Logo" className="logo-section">
             <img src={logoImage} alt="Logo do Program.Ada" className="logo-image" />
@@ -45,12 +53,14 @@ function App() {
             <p>Grid para integrantes</p>
         </Section>
 
-        <Section id="ContateNos" title="Contate-nos">
-            <p>Formulário de contato</p>
+        <Section id="ContateNos" title="">
+          <Contact />
         </Section>
       </main>
 
       <Footer />
+
+      <BackToTopButton />
     </>
   );
 }
