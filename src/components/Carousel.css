@@ -19,15 +19,24 @@
     min-height: 200px;
     margin-bottom: 20px;
     padding: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+.carousel-text-container {
+    flex-grow: 1;
+    min-width: 0;
+    order: 1;
 }
 
 .carousel-image-container {
-    position: absolute;
     top: 0;
     right: 0;
     width: 35%;
     max-width: 200px;
     padding: 5px;
+    flex-shrink: 0;
+        order: 2;
 }
 
 .carousel-image {
@@ -39,7 +48,6 @@
 
 .carousel-text {
     width: 100%;
-    padding-right: calc(35% + 15px);
 }
 
 /* When there's no image */

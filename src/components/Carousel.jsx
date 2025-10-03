@@ -54,10 +54,12 @@ function Carousel() {
             />
           </div>
         )}
-        <h3 className="carousel-text">{pages[currentPage].title} </h3>
-        <p className="carousel-text" style={{ whiteSpace: "pre-line" }}>
-          {pages[currentPage].content}
-        </p>
+        <div className="carousel-text-container">
+          <h3 className="carousel-text">{pages[currentPage].title} </h3>
+          <p className="carousel-text" style={{ whiteSpace: "pre-line" }}>
+            {pages[currentPage].content}
+          </p>
+        </div>
       </div>
 
       <div className="carousel-controls">
