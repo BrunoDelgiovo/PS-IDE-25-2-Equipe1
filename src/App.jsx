@@ -12,6 +12,12 @@ import logoImage from './images/Program_Ada.png';
 function App() {
   return (
     <>
+      <div className="background-wrap">
+        <div className="bubble bubble-1"></div>
+        <div className="bubble bubble-2"></div>
+        <div className="bubble bubble-3"></div>
+      </div>
+      
       <Navbar />
       <section id="Logo" className="logo-section">
             <img src={logoImage} alt="Logo do Program.Ada" className="logo-image" />
@@ -47,7 +53,9 @@ function App() {
             <p>Grid para integrantes</p>
         </Section>
 
-        <Contact />
+        <Section id="ContateNos" title="">
+          <Contact />
+        </Section>
       </main>
 
       <Footer />

@@ -49,7 +49,7 @@ const Contact = () => {
         <form onSubmit={onSubmit}>
           <div className="title-bar">
             <div className="title-text">CONTATE-NOS</div>
-            <div className="title-bar-grey"></div>
+            <div className="title-bar-rest"></div>
           </div>
           <div className="form-body">
             <div className="inputbox">
