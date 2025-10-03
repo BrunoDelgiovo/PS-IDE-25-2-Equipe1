@@ -64,7 +64,7 @@ function Carousel() {
 
       <div className="carousel-controls">
         <button
-          className="carousel-arrow carousel-prev"
+          className="carousel-arrow"
           onClick={goToPrevious}
           aria-label="Previous page"
         >
@@ -82,7 +82,7 @@ function Carousel() {
         </div>
 
         <button
-          className="carousel-arrow carousel-next"
+          className="carousel-arrow"
           onClick={goToNext}
           aria-label="Next page"
         >
