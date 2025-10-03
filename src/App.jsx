@@ -61,7 +61,7 @@ function App() {
           </ul>
         </Section>
 
-        <Section id="Projetos" title="Projetos">
+        <Section id="Projetos" title="Projetos 2024/2025">
           <Carousel />
         </Section>
 

@@ -10,9 +10,27 @@ function Carousel() {
       image: "src/images/PortasAbertas.png",
     },
     {
-      title: "Torneio Feminino de Programação:",
+      title: "Torneio Feminino de Programação",
       content:
-        "Uma colaboração com o Laboratório de Programação Competitiva (LPC).",
+        "Uma colaboração com o Laboratório de Programação Competitiva (LPC).\n\nAs atividades envolveram o auxílio na organização do torneio, monitoria das participantes durante a prova e a confecção de materiais de divulgação (artes e slides).",
+    },
+    {
+      title: "Cofferência - Roda de Conversa",
+      content:
+        "Um evento para divulgar o projeto Program.Ada para outras mulheres da instituição.\n\nO grupo apresentou seu papel na comunidade e como o projeto foi criado.",
+      image: "src/images/Cofferencia.png",
+    },
+    {
+      title: "Ação nas Enchentes",
+      content:
+        "Uma iniciativa de voluntariado para ajudar vítimas das enchentes.\n\nO projeto envolveu a arrecadação de fundos, a compra e distribuição de itens de higiene, roupas e alimentos para animais, além da organização de notas e formulários para prestação de contas.",
+      image: "",
+    },
+    {
+      title: "Carpool",
+      content:
+        "Um projeto de caronas solidárias, criado em resposta às enchentes.\n\nO grupo organizou formulários e grupos para conectar colegas que precisavam de transporte para o campus.",
+      image: "",
     },
   ];
   const [currentPage, setCurrentPage] = useState(0);
