@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Carousel from "./components/Carousel";
 import BackToTopButton from "./components/BackToTopButton";
 import Contact from "./components/Contact";
+import GridParticipantes from "./components/GridParticipantes";
 
 import "./App.css";
 
@@ -91,9 +92,7 @@ function App() {
           </p>
         </Section>
 
-        <Section id="Integrantes" title="Integrantes">
-          <p>Grid para integrantes</p>
-        </Section>
+        <GridParticipantes />
 
         <Section id="ContateNos" title="">
           <Contact />
