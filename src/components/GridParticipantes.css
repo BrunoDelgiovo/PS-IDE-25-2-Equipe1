@@ -42,6 +42,12 @@
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .08), 2px 2px 4px rgba(0, 0, 0, .18);
 }
 
+.participante-card:hover {
+  background-color: #f5f5f5; 
+  box-shadow: 0 4px 15px rgba(138, 43, 226, 0.5); 
+  transform: translateY(-5px);
+}
+
 .window-header{
     background: linear-gradient(silver 0%, gray 100%);
     border-bottom: 2px solid #000;
@@ -53,7 +59,7 @@
 }
 .window-header__title {
    background: linear-gradient(135deg, #8a2be2 0%, #e84393 100%);
-    color: #fff; /* Texto branco para contraste */
+    color: #fff;
     border: 2px solid #000;
     display: flex;
     align-items: center;
@@ -61,8 +67,8 @@
     font-size: 1.1rem;
     min-width: 170px;
     margin: 0;
-    padding: 8px 16px; /* Espaçamento interno para criar a caixa */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Sombra para legibilidade */
+    padding: 8px 16px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     letter-spacing: 1px;
     font-weight: 700;
 }
@@ -163,7 +169,6 @@
     position: relative;
 }
 
-/* O "indicador" roxo que se move */
 .participants-controls__thumb {
     position: absolute;
     width: 90%;
@@ -172,16 +177,14 @@
     left: 50%;
     transform: translateX(-54%);
     transition: top 0.2s ease-in-out;
-
     --thumb-height-divisor: var(--total-pages, 1);
     --safe-total-pages: calc(var(--total-pages, 1) - 1 + 0.0001);
-
     height: calc(100% / var(--thumb-height-divisor));
     top: calc( (100% - (100% / var(--thumb-height-divisor))) * (var(--current-page, 0) / var(--safe-total-pages)) );
 }
 
 .participants-controls__arrow:active {
-    border-style: inset; /* Efeito de botão pressionado */
+    border-style: inset;
 }
 
 .participants-controls__arrow--disabled {
@@ -189,44 +192,37 @@
     cursor: not-allowed;
 }
 
-
 @media (max-width: 768px) {
-    /* Ajusta a altura da janela principal para se adaptar ao conteúdo */
     .window-container {
         height: auto;
         margin: 10px;
     }
 
-    /* Muda o grid para uma única coluna */
     .participantes-grid {
         grid-template-columns: 1fr;
-        height: auto; /* Altura automática para acomodar os cards */
-        padding: 15px; /* Ajusta o padding para telas menores */
+        height: auto;
+        padding: 15px;
     }
     
-    /* Altera o layout do card para horizontal */
     .participante-card {
         height: auto;
-        flex-direction: row; /* Coloca a imagem e o texto lado a lado */
-        align-items: center;  /* Alinha verticalmente a imagem e o texto */
-        gap: 15px;            /* Adiciona um espaço entre a imagem e o texto */
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
     }
 
-    /* Ajusta a imagem no layout horizontal */
     .participante-card__image {
         width: 85px;
         height: 85px;
         margin: 4px;
-        flex-shrink: 0; /* Impede que a imagem encolha */
+        flex-shrink: 0;
         margin-bottom: 0;
     }
 
-    /* Alinha o corpo do texto à esquerda */
     .participante-card__body {
         text-align: left;
     }
 
-    /* Alinha os textos individuais à esquerda */
     .participante-card__nome,
     .participante-card__curso,
     .participante-card__year {
