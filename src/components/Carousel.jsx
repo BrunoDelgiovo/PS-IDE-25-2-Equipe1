@@ -71,17 +71,14 @@ function Carousel() {
           &larr;
         </button>
 
-        <div className="carousel-track">
-          {pages.map((_, index) => (
-            <button
-              key={index}
-              className={`carousel-dot ${
-                currentPage === index ? "active" : ""
-              }`}
-              onClick={() => setCurrentPage(index)}
-              aria-label={`Go to page ${index + 1}`}
-            />
-          ))}
+        <div className="carousel-scrollbar">
+          <div
+            className="carousel-scrollbar-thumb"
+            style={{
+              width: `${100 / pages.length}%`,
+              left: `${(currentPage / pages.length) * 100}%`,
+            }}
+          ></div>
         </div>
 
         <button
