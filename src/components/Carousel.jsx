@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Carousel.css";
+import portasAbertasImage from "../images/PortasAbertas.png";
+import cofferenciaImage from "../images/Cofferencia.png";
 
 function Carousel() {
   const pages = [
@@ -7,7 +9,7 @@ function Carousel() {
       title: "Portas Abertas 2025",
       content:
         'Uma oficina de programação em Portugol para o evento "Portas Abertas".\n\nO grupo preparou uma apresentação sobre sua história e conduziu sessões de 30 minutos com os participantes,que tiveram uma boa adesão.',
-      image: "src/images/PortasAbertas.png",
+      image: portasAbertasImage,
     },
     {
       title: "Torneio Feminino de Programação",
@@ -18,7 +20,7 @@ function Carousel() {
       title: "Cofferência - Roda de Conversa",
       content:
         "Um evento para divulgar o projeto Program.Ada para outras mulheres da instituição.\n\nO grupo apresentou seu papel na comunidade e como o projeto foi criado.",
-      image: "src/images/Cofferencia.png",
+      image: cofferenciaImage,
     },
     {
       title: "Ação nas Enchentes",
