@@ -118,7 +118,7 @@ function App() {
           </p>
           <p>
             Para maiores informações do programa, acesse o Link:
-            <a href="https://meninas.sbc.org.br/">
+            <a href="https://meninas.sbc.org.br/" style={{ color: '#8a2be2', textDecoration: 'underline' }}>
               https://meninas.sbc.org.br/
             </a>
           </p>

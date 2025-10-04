@@ -68,7 +68,7 @@ function Carousel() {
           onClick={goToPrevious}
           aria-label="Previous page"
         >
-          &larr;
+          &#9664;
         </button>
 
         <div className="carousel-scrollbar">
@@ -86,7 +86,7 @@ function Carousel() {
           onClick={goToNext}
           aria-label="Next page"
         >
-          &rarr;
+          &#9654;
         </button>
       </div>
     </div>

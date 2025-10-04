@@ -93,18 +93,37 @@
   transition: left 0.3s ease-in-out;
 }
 
+
 .carousel-arrow {
-  height: 20px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 10px;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 12px;
-  cursor: pointer;
-  box-sizing: border-box;
+    background: #e0e0e0;
+    border: 2px outset silver;
+    width: 30px;  
+    height: 30px;
+    font-size: 1.5rem; 
+    
+    padding: 0;
+    border-radius: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.carousel-arrow:hover {
+    background: #d4d4d4;
+}
+
+.carousel-arrow:active {
+    border-style: inset;
+    background: #c0c0c0;
+}
+
+/* Estilo para quando a seta estiver desabilitada (início/fim do carrossel) */
+.carousel-arrow[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-style: inset;
 }
 
 /* Responsive adjustments */
