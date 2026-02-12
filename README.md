@@ -1,11 +1,12 @@
-# Rodar localmente
+# Run Locally
 terminal:
 ```bash
 npm install
 
 npm run dev 
 ```
-
+# Hosted Website link 
+https://ps-ide-25-2-equipe1-oigc-4u9aqskvk-bruno-delgiovos-projects.vercel.app
 
 # React + Vite
 
